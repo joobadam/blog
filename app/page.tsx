@@ -20,7 +20,7 @@ export default function IndexPage() {
       <Video1/>
       <Help/>
       <Video2/>
-      <Price/>
+       <Price/> 
       <Video3/>
       <Blog/>
       <Testimonials/>

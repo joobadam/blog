@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useLayoutEffect } from "react";
+import React, { useLayoutEffect,useRef } from "react";
 import Image from "next/image";
 import pic3 from "../assets/pic3.avif";
 import pic4 from "../assets/pic4.avif";
@@ -8,12 +8,16 @@ import pic5 from "../assets/pic5.avif";
 import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
-const Help = (): any => {
+const Help = () => {
   gsap.registerPlugin(ScrollTrigger);
+
+  const text1ref= useRef(null)
+  const text2ref= useRef(null)
+  const text3ref= useRef(null)
 
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
-      gsap.from(".card", {
+      gsap.from([text1ref.current,text2ref.current,text3ref.current], {
         scrollTrigger: {
           trigger: ".video1",
           start: "bottom top",
@@ -42,7 +46,7 @@ const Help = (): any => {
         </h2>
       </label>
       <div className="w-full h-fit grid grid-cols-1 grid-rows-3 md:grid-cols-3 md:grid-rows-1 gap-5 ">
-        <div className="px-2 py-10 flex justify-center items-center flex-col gap-y-5 shadow-2xl border rounded-2xl h-[100%] glass card">
+        <div className="px-2 py-10 flex justify-center items-center flex-col gap-y-5 shadow-2xl border rounded-2xl h-[100%] glass card" ref={text1ref}>
           <div className="h-[10%]">
             <h3 className="uppercase font-semibold">Burning fat</h3>
           </div>
@@ -53,7 +57,7 @@ const Help = (): any => {
             <h4>{text1}</h4>
           </div>
         </div>
-        <div className="px-2 py-10 flex justify-center items-center flex-col gap-y-5 shadow-2xl border rounded-2xl h-[100%] glass card md:translate-y-10">
+        <div className="px-2 py-10 flex justify-center items-center flex-col gap-y-5 shadow-2xl border rounded-2xl h-[100%] glass card md:translate-y-10" ref={text2ref}>
           <div className="h-[10%]">
             <h3 className="uppercase font-semibold">strength training</h3>
           </div>
@@ -64,7 +68,7 @@ const Help = (): any => {
             <h4>{text2}</h4>
           </div>
         </div>
-        <div className="px-2 py-10 flex justify-center items-center flex-col gap-y-5 shadow-2xl border rounded-2xl h-[100%] glass card">
+        <div className="px-2 py-10 flex justify-center items-center flex-col gap-y-5 shadow-2xl border rounded-2xl h-[100%] glass card" ref={text3ref}>
           <div className="h-[10%]">
             <h3 className="uppercase font-semibold">endurance training</h3>
           </div>

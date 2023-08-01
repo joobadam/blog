@@ -57,7 +57,6 @@ const Start = () => {
             </mask>
         </defs>
          <rect width="1728" height="851.376" fill="#dc2626"  mask="url(#circleMask)"/>   
-      {/*   <image style={{transform:"translateX(-20%)" }} href="https://images.unsplash.com/flagged/photo-1593005510509-d05b264f1c9c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80"  mask="url(#circleMask)" className="w-full h-full "/>  */}
     </svg>
     </section>
   );

@@ -1,10 +1,39 @@
 "use client"
 
-import React,{useLayoutEffect} from 'react'
+import React,{useLayoutEffect, useRef} from 'react'
 import { CheckIcon } from '@heroicons/react/20/solid'
 import Mesh2 from './Mesh2'
 import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
+
+
+
+export default function Price() {
+
+  const price1Ref = useRef(null)
+  const price2Ref = useRef(null)
+
+  gsap.registerPlugin(ScrollTrigger)
+
+  useLayoutEffect(()=>{
+    let ctx = gsap.context(()=>{
+        gsap.from([price1Ref.current,price2Ref.current],{
+            scrollTrigger:{
+                trigger:'.video3',
+                start:'bottom top',
+                toggleActions: "play none none none",
+                scrub:false
+            },
+            opacity:0,
+            duration:1,
+            stagger:0.4,
+            x:100,
+
+        })
+    })
+
+    return () => ctx.revert()
+},[])
 
 const tiers = [
   {
@@ -13,6 +42,7 @@ const tiers = [
     href: '#',
     priceMonthly: '$300',
     description: "The perfect choice to start your fitness journey.",
+    refid: price1Ref,
     features: [
       'Cost-effectiveness',
       'Consistency',
@@ -30,6 +60,7 @@ const tiers = [
     priceMonthly: '$250',
     description: 'A plan that scales with your rapidly growing business.',
     features: ['Priority support', 'Free wellness ', 'Advanced analytics', 'Long-term commitment'],
+    refid:price2Ref,
     featured: false,
   },
 ]
@@ -37,30 +68,6 @@ const tiers = [
 function classNames(...classes:any) {
   return classes.filter(Boolean).join(' ')
 }
-
-export default function Price() {
-
-  gsap.registerPlugin(ScrollTrigger)
-
-  useLayoutEffect(()=>{
-    let ctx = gsap.context(()=>{
-        gsap.from(".price",{
-            scrollTrigger:{
-                trigger:'.video3',
-                start:'bottom top',
-                toggleActions: "play none none none",
-                scrub:false
-            },
-            opacity:0,
-            duration:1,
-            stagger:0.4,
-            x:100,
-
-        })
-    })
-
-    return () => ctx.revert()
-},[])
 
   return (
     <div className="relative isolate  px-6 py-24 sm:py-32 lg:px-8">
@@ -88,6 +95,7 @@ export default function Price() {
                 : 'sm:rounded-t-none lg:rounded-tr-3xl lg:rounded-bl-none',
               'rounded-3xl p-8 ring-1 ring-gray-900/10 sm:p-10'
             )}
+            ref={tier.refid}
           >
             <h3 id={tier.id} className="text-base font-semibold leading-7 text-red-600">
               {tier.name}
