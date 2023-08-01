@@ -15,7 +15,7 @@ const Offers = () =>  {
         <Mesh/>
         <div className='absolute top-5 right-20 w-[40%] font-semibold text-sm md:text-2xl lg:text-3xl '>
           <h3>
-          Ready to achieve your fitness goals? <br /> Join my training sessions, and together, we'll stay motivated and conquer challenges. <br /> Let's make progress and celebrate success! 
+          Ready to achieve your fitness goals? <br /> Join my training sessions, and together, we`ll stay motivated and conquer challenges. <br /> Let`s make progress and celebrate success! 
           </h3>
         </div>
     </div>

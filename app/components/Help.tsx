@@ -9,7 +9,8 @@ import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 
 
-const Help = () => {
+
+const Help = ():any => {
 
     gsap.registerPlugin(ScrollTrigger)
 
@@ -52,7 +53,7 @@ const Help = () => {
                 </div>
                 <div className='h-[30%]'>
                     <h4>
-                    Unlock your body's fat-burning potential with our high-intensity workout!  Embrace the challenge, see real results, and build a stronger, fitter version of yourself. Don't wait, start your fat-burning journey today and achieve the fit, confident body you deserve!
+                    Unlock your body`s fat-burning potential with our high-intensity workout!  Embrace the challenge, see real results, and build a stronger, fitter version of yourself. Don`t wait, start your fat-burning journey today and achieve the fit, confident body you deserve!
                     </h4>
                 </div>
             </div>
@@ -67,7 +68,7 @@ const Help = () => {
                 </div>
                 <div className='h-[30%]'>
                     <h4>
-                    Power up your strength and transform into a powerhouse!  Embrace the challenge, witness your progress, and feel unstoppable. Don't miss this opportunity to unlock your true strength!
+                    Power up your strength and transform into a powerhouse!  Embrace the challenge, witness your progress, and feel unstoppable. Don`t miss this opportunity to unlock your true strength!
                     </h4>
                 </div>
             </div>
@@ -82,7 +83,7 @@ const Help = () => {
                 </div>
                 <div className='h-[30%]'>
                     <h4>
-                    Unleash your endurance potential with us!  I'll push your limits and help you discover a stronger you. Boost your stamina and energy levels while enjoying my exciting workouts. Don't miss this chance to embark on a journey of new challenges!
+                    Unleash your endurance potential with us!  I`ll push your limits and help you discover a stronger you. Boost your stamina and energy levels while enjoying my exciting workouts. Don`t miss this chance to embark on a journey of new challenges!
                     </h4>
                 </div>
             </div>
