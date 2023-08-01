@@ -43,17 +43,17 @@ const Hero = () => {
         <div>
           <Image src={trainer1} alt="trainer" className="w-full h-full object-contain  absolute top-0 translate-x-[10%]" ref={trainerRef}/>
         </div>
-        <div className='absolute top-0 left-0 h-screen w-full flex justify-center items-start flex-col px-5 font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl gap-y-2 overflow-hidden uppercase md:pl-20 lg:pl-32' ref={helloRef}>
+        <div className='absolute top-0 left-0 h-screen w-full flex justify-center items-start flex-col px-5 font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl gap-y-2 overflow-hidden uppercase md:pl-20 lg:pl-32 gradient' ref={helloRef}>
           <div className='hello'>
-            <h1>Hello there!</h1>
+            <span className='gradient'>Hello there!</span>
           </div>
           <div className='hello'>
-            <h1>{nameText}</h1>
+            <span className='gradient'>{nameText}</span>
           </div>
           <div className='hello'>
-            <h1>
+            <span className='gradient'>
             a personal trainer
-            </h1>
+            </span>
           </div>
         </div>
         <div>

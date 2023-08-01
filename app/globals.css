@@ -16,6 +16,10 @@ html{
   word-wrap: break-word;
 }
 
+.gradient{
+  @apply bg-gradient-to-r from-teal-400 to-indigo-500 bg-clip-text text-transparent
+}
+
 .displacement {
     filter: url(#displacementFilter);
 }
