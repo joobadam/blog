@@ -33,6 +33,8 @@ const Hero = () => {
     return () => ctx.revert()
   }, [])
 
+  const nameText = `I'm Mike,`
+  const buttonText = `Let's go`
 
   return (
     <div className='w-full hero h-screen text-white relative'>
@@ -46,7 +48,7 @@ const Hero = () => {
             <h1>Hello there!</h1>
           </div>
           <div className='hello'>
-            <h1>I`m Mike,</h1>
+            <h1>{nameText}</h1>
           </div>
           <div className='hello'>
             <h1>
@@ -55,7 +57,7 @@ const Hero = () => {
           </div>
         </div>
         <div>
-          <button className='h-[40px] w-[250px] bg-indigo-500 rounded-xl font-semibold shadow-2xl absolute bottom-[10%] left-[30%] hover:scale-105 hover:bg-indigo-300 duration-150 translate-y-[100%] opacity-0' ref={buttonRef}>Let`s go</button>
+          <button className='h-[40px] w-[250px] bg-indigo-500 rounded-xl font-semibold shadow-2xl absolute bottom-[10%] left-[30%] hover:scale-105 hover:bg-indigo-300 duration-150 translate-y-[100%] opacity-0' ref={buttonRef}>{buttonText}</button>
         </div>
     </div>
   )
