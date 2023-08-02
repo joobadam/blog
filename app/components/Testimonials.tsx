@@ -14,18 +14,18 @@ import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
     console.log("ScrollTrigger", ScrollTrigger)
     useLayoutEffect(()=>{
       let ctx = gsap.context(()=>{
-          gsap.from([text1Ref.current,text2Ref.current,text3Ref.current,text4Ref.current,text5Ref.current],{
+          gsap.to([text1Ref.current,text2Ref.current,text3Ref.current,text4Ref.current,text5Ref.current],{
               scrollTrigger:{
                   trigger:'.blog',
                   start:'bottom top',
                   toggleActions: "play none none none",
                   scrub:false
               },
-              opacity:0,
+              opacity:1,
               duration:1,
               stagger:0.2,
               lazy: false,
-              y:100,
+              y:0,
           })
       })
       
@@ -124,7 +124,7 @@ import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
             </p>
           </div>
           <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 grid-rows-1 gap-8 text-sm leading-6  sm:mt-20 sm:grid-cols-2 xl:mx-0 xl:max-w-none xl:grid-flow-col xl:grid-cols-4">
-            <figure className="col-span-2 hidden sm:block sm:rounded-2xl border sm:shadow-lg sm:ring-1 sm:ring-gray-900/5 xl:col-start-2 xl:row-end-1 glass testimonials" ref={text1Ref}>
+            <figure className="col-span-2 hidden sm:block sm:rounded-2xl border sm:shadow-lg sm:ring-1 sm:ring-gray-900/5 xl:col-start-2 xl:row-end-1 glass testimonials opacity-0 translate-y-[100px]" ref={text1Ref}>
               <blockquote className="p-12 text-xl font-semibold leading-8 tracking-tight ">
                 <p>{`“${featuredTestimonial.body}”`}</p>
               </blockquote>
@@ -156,7 +156,7 @@ import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
                     {column.map((testimonial) => (
                       <figure
                         key={testimonial.author.handle}
-                        className="rounded-2xl border p-6 shadow-lg ring-1 ring-gray-900/5 glass testimonials"
+                        className="rounded-2xl border p-6 shadow-lg ring-1 ring-gray-900/5 glass testimonials opacity-0 translate-y-[100px]"
                         ref={testimonial.author.refid}
                       >
                         <blockquote>

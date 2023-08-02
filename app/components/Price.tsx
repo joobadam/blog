@@ -17,18 +17,18 @@ export default function Price() {
 
   useLayoutEffect(()=>{
     let ctx = gsap.context(()=>{
-        gsap.from([price1Ref.current,price2Ref.current],{
+        gsap.to([price1Ref.current,price2Ref.current],{
             scrollTrigger:{
                 trigger:'.video3',
                 start:'bottom top',
                 toggleActions: "play none none none",
                 scrub:false
             },
-            opacity:0,
+            opacity:1,
             duration:1,
             stagger:0.4,
             lazy: false,
-            x:100,
+            x:0,
 
         })
     })
@@ -93,7 +93,7 @@ function classNames(...classes:any) {
                 : tierIdx === 0
                 ? 'rounded-t-3xl sm:rounded-b-none lg:rounded-tr-none lg:rounded-bl-3xl'
                 : 'sm:rounded-t-none lg:rounded-tr-3xl lg:rounded-bl-none',
-              'rounded-3xl p-8 ring-1 ring-gray-900/10 sm:p-10'
+              'rounded-3xl p-8 ring-1 ring-gray-900/10 sm:p-10 opacity-0 translate-x-[100px]'
             )}
             ref={tier.refid}
           >

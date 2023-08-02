@@ -17,18 +17,18 @@ const Help = () => {
 
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
-      gsap.from([text1ref.current,text2ref.current,text3ref.current], {
+      gsap.to([text1ref.current,text2ref.current,text3ref.current], {
         scrollTrigger: {
           trigger: ".video1",
           start: "bottom top",
           toggleActions: "play none none none",
           scrub: false,
         },
-        opacity: 0,
+        opacity: 1,
         duration: 1,
         stagger: 0.4,
         lazy: false,
-        y: 100,
+        y: 0,
       });
     });
 
@@ -47,18 +47,18 @@ const Help = () => {
         </h2>
       </label>
       <div className="w-full h-fit grid grid-cols-1 grid-rows-3 md:grid-cols-3 md:grid-rows-1 gap-5 ">
-        <div className="px-2 py-10 flex justify-center items-center flex-col gap-y-5 shadow-2xl border rounded-2xl h-fit glass card" ref={text1ref}>
-          <div className="h-[10%]">
+        <div className="px-2 py-10 flex justify-center items-center flex-col gap-y-5 shadow-2xl border rounded-2xl h-fit glass card opacity-0 translate-y-[100px]" ref={text1ref}>
+          <div className="h-[5%]">
             <h3 className="uppercase font-semibold">Burning fat</h3>
           </div>
-          <div className="h-[60%]">
+          <div className="h-[50%]">
             <Image src={pic3} alt="training" className=" object-cover" />
           </div>
-          <div className="h-[30%]">
+          <div className="h-[20%]">
             <h4>{text1}</h4>
           </div>
         </div>
-        <div className="px-2 py-10 flex justify-center items-center flex-col gap-y-5 shadow-2xl border rounded-2xl h-fit glass card md:translate-y-10" ref={text2ref}>
+        <div className="px-2 py-10 flex justify-center items-center flex-col gap-y-5 shadow-2xl border rounded-2xl h-fit glass card md:translate-y-10 opacity-0 translate-y-[100px]" ref={text2ref}>
           <div className="h-[10%]">
             <h3 className="uppercase font-semibold">strength training</h3>
           </div>
@@ -69,7 +69,7 @@ const Help = () => {
             <h4>{text2}</h4>
           </div>
         </div>
-        <div className="px-2 py-10 flex justify-center items-center flex-col gap-y-5 shadow-2xl border rounded-2xl h-fit glass card" ref={text3ref}>
+        <div className="px-2 py-10 flex justify-center items-center flex-col gap-y-5 shadow-2xl border rounded-2xl h-fit glass card opacity-0 translate-y-[100px]" ref={text3ref}>
           <div className="h-[10%]">
             <h3 className="uppercase font-semibold">endurance training</h3>
           </div>

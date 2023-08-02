@@ -9,13 +9,15 @@ import Mesh2 from './Mesh2'
 
 const Hero = () => {
 
-  const trainerRef = useRef(null)
-  const helloRef = useRef(null)
+
+  const hello1Ref = useRef(null)
+  const hello2Ref = useRef(null)
+  const hello3Ref = useRef(null)
   const buttonRef = useRef(null)
 
   useLayoutEffect(() => {
     let ctx = gsap.context(()=>{
-      gsap.to(helloRef.current,{
+      gsap.to([hello1Ref.current,hello2Ref.current,hello3Ref.current],{
         opacity:1,
         x:0,
         duration:1.2,
@@ -42,17 +44,17 @@ const Hero = () => {
         <Start/>
           <Mesh2/>
         <div>
-          <Image src={trainer1} alt="trainer" className="w-full h-full object-contain  absolute top-0 sm:translate-x-[10%]" ref={trainerRef}/>
+          <Image src={trainer1} alt="trainer" className="w-full h-full object-contain  absolute top-0 sm:translate-x-[10%]"/>
         </div>
-        <div className='absolute top-0 left-0 h-screen w-full flex justify-center items-start flex-col px-5 font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl gap-y-2 overflow-hidden uppercase md:pl-20 lg:pl-32 gradient -translate-y-[30%]' ref={helloRef}>
-          <div className='hello'>
-            <span className='gradient'>Hello there!</span>
+        <div className='absolute top-0 left-0 h-screen w-full flex justify-center items-start flex-col px-5 font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl gap-y-2 overflow-hidden uppercase md:pl-20 lg:pl-32 gradient -translate-y-[30%]'>
+          <div className='hello' ref={hello1Ref}>
+            <span className='gradient' >Hello there!</span>
           </div>
-          <div className='hello'>
-            <span className='gradient'>{nameText}</span>
+          <div className='hello'ref={hello2Ref}>
+            <span className='gradient' >{nameText}</span>
           </div>
-          <div className='hello'>
-            <span className='gradient'>
+          <div className='hello' ref={hello3Ref}>
+            <span className='gradient' >
             a personal trainer
             </span>
           </div>
