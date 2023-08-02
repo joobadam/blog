@@ -79,8 +79,7 @@ function classNames(...classes:any) {
         </p>
       </div>
       <p className="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 ">
-        Qui iusto aut est earum eos quae. Eligendi est at nam aliquid ad quo reprehenderit in aliquid fugiat dolorum
-        voluptatibus.
+      You can choose the one that suits you best from multiple options
       </p>
       <div className="mx-auto mt-16 grid max-w-lg grid-cols-1 items-center gap-y-6 sm:mt-20 sm:gap-y-0 lg:max-w-4xl lg:grid-cols-2">
         {tiers.map((tier, tierIdx) => (

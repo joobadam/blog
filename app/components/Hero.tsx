@@ -41,9 +41,9 @@ const Hero = () => {
         <Start/>
           <Mesh2/>
         <div>
-          <Image src={trainer1} alt="trainer" className="w-full h-full object-contain  absolute top-0 translate-x-[10%]" ref={trainerRef}/>
+          <Image src={trainer1} alt="trainer" className="w-full h-full object-contain  absolute top-0 sm:translate-x-[10%]" ref={trainerRef}/>
         </div>
-        <div className='absolute top-0 left-0 h-screen w-full flex justify-center items-start flex-col px-5 font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl gap-y-2 overflow-hidden uppercase md:pl-20 lg:pl-32 gradient' ref={helloRef}>
+        <div className='absolute top-0 left-0 h-screen w-full flex justify-center items-start flex-col px-5 font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl gap-y-2 overflow-hidden uppercase md:pl-20 lg:pl-32 gradient -translate-y-[30%]' ref={helloRef}>
           <div className='hello'>
             <span className='gradient'>Hello there!</span>
           </div>
@@ -57,7 +57,7 @@ const Hero = () => {
           </div>
         </div>
         <div>
-          <button className='h-[40px] w-[250px] bg-indigo-500 rounded-xl font-semibold shadow-2xl absolute bottom-[10%] left-[30%] hover:scale-105 hover:bg-indigo-300 duration-150 translate-y-[100%] opacity-0' ref={buttonRef}>{buttonText}</button>
+          <button className='h-[40px] w-[250px] bg-indigo-500 rounded-xl font-semibold shadow-2xl absolute bottom-[10%] left-[15%]  hover:scale-105 hover:bg-indigo-300 duration-150 translate-y-[100%] opacity-0' ref={buttonRef}>{buttonText}</button>
         </div>
     </div>
   )

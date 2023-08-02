@@ -21,8 +21,8 @@ export default function RootLayout({
         className={` ${inter.className} bg-neutral-100 text-black dark:bg-black  dark:text-white h-full duration-500`}
 >
         <Providers>
-          <Navbar />
           <main className="max-w-screen-2xl mx-auto">
+          <Navbar />
             {children}
           </main>
         </Providers>

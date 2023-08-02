@@ -11,7 +11,7 @@ import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
   export default function Testimonials() {
 
     gsap.registerPlugin(ScrollTrigger)
-
+    console.log("ScrollTrigger", ScrollTrigger)
     useLayoutEffect(()=>{
       let ctx = gsap.context(()=>{
           gsap.from([text1Ref.current,text2Ref.current,text3Ref.current,text4Ref.current,text5Ref.current],{
@@ -27,7 +27,7 @@ import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
               y:100,
           })
       })
-  
+      
       return () => ctx.revert()
   },[])
 

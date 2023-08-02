@@ -17,7 +17,7 @@ html{
 }
 
 .gradient{
-  @apply bg-gradient-to-r from-teal-400 to-indigo-500 bg-clip-text text-transparent
+  @apply bg-gradient-to-b from-indigo-500 to-indigo-900 bg-clip-text text-transparent
 }
 
 .displacement {
