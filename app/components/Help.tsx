@@ -27,6 +27,7 @@ const Help = () => {
         opacity: 0,
         duration: 1,
         stagger: 0.4,
+        lazy: false,
         y: 100,
       });
     });

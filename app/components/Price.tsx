@@ -27,6 +27,7 @@ export default function Price() {
             opacity:0,
             duration:1,
             stagger:0.4,
+            lazy: false,
             x:100,
 
         })

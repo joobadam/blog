@@ -24,6 +24,7 @@ import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
               opacity:0,
               duration:1,
               stagger:0.2,
+              lazy: false,
               y:100,
           })
       })

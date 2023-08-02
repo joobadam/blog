@@ -15,11 +15,12 @@ const Hero = () => {
 
   useLayoutEffect(() => {
     let ctx = gsap.context(()=>{
-      gsap.to(".hello",{
+      gsap.to(helloRef.current,{
         opacity:1,
         x:0,
         duration:1.2,
         delay:1,
+        lazy: false,
         stagger:0.2
       })
     })
