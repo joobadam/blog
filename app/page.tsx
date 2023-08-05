@@ -10,9 +10,13 @@ import Video3 from "./components/Video3";
 import Video4 from "./components/Video4";
 import Footer from './components/Footer'
 import Price from './components/Price' 
+import { gsap } from "gsap/dist/gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 
 export default function IndexPage() {
+
+  gsap.registerPlugin(ScrollTrigger);
   return (
    <main>
       <Hero/>

@@ -7,7 +7,7 @@ import {ScrollTrigger} from "gsap/dist/ScrollTrigger"
 
 
 const Start = () => {
-    gsap.registerPlugin(ScrollTrigger);
+     gsap.registerPlugin(ScrollTrigger); 
 
     useLayoutEffect(()=>{
         let ctx = gsap.context(()=>{
